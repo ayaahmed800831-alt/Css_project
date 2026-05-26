@@ -11,7 +11,7 @@ tabs.forEach((tab) => {
     if      (e.key === 'ArrowRight') idx = (idx + 1) % tabs.length;
     else if (e.key === 'ArrowLeft')  idx = (idx - 1 + tabs.length) % tabs.length;
     else return;
-
+      
     e.preventDefault();
     activateTab(tabs[idx]);
     tabs[idx].focus();
