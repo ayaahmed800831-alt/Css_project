@@ -1,0 +1,295 @@
+
+
+:root {
+  --bg: #070a12;
+  --panel: #0e1424;
+  --panel-soft: #121a30;
+  --text: #eaf0ff;
+  --muted: #9aa7c2;
+  --accent: #7c5cff;
+  --border: rgba(255,255,255,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  height: 100vh;
+  color: var(--text);
+}
+.main {
+  width: 100%;
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 12px 18px;
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #0b0f1a;
+}
+
+.panel {
+  display: none;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 12px;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel-subtitle {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel-soft);
+  color: var(--text);
+  border-radius: 8px;
+}
+
+.form-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.form-row label {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-row input {
+  width: fit-content;
+}
+
+.form-row.split input {
+  width: 100%;
+}
+.submit-btn {
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #0b0f1a;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.modal-close:focus {
+  outline: 2px solid var(--accent);
+}
+
+.modal-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.modal-body {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-data-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: var(--panel-soft);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.modal-data-row span:first-child {
+  color: var(--muted);
+}
+
+.modal-data-row span:last-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.modal-footer {
+  margin-top: 4px;
+}
+
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row.split {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.form-row.split .field-group {
+  flex: 1;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #ff6b6b;
+  min-height: 16px;
+  display: block;
+}
+
+.field-hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+input.invalid,
+select.invalid {
+  border-color: #ff6b6b;
+}
+
+input.valid,
+select.valid {
+  border-color: #4caf50;
+}
+
+.radio-fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-fieldset legend {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 0 6px;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.radio-label input,
+.checkbox-label input {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tab:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
