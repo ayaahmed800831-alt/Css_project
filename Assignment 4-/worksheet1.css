@@ -1,0 +1,357 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+.navbar {
+  background: #111827;
+  color: white;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links span {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-links span:hover {
+  color: #93c5fd;
+}
+
+.slogan {
+  width: 100%;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+
+.hero {
+  height: 70vh;
+
+  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 24px;
+}
+
+.hero-content {
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  color: white;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+.hero-button {
+  background: #2563eb;
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 8px;
+
+  width: fit-content;
+  margin: auto;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hero-button:hover {
+  background: #1d4ed8;
+}
+
+
+.cities-container {
+  max-width: 1200px;
+  margin: 60px auto;
+
+  display: grid;
+  gap: 32px;
+
+  padding: 0 24px;
+}
+.city-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.city-content {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.city-name {
+  display: block;
+
+  background: #1f2937;
+  color: white;
+
+  padding: 20px 24px;
+
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.city-description {
+  font-size: 17px;
+  color: #374151;
+}
+
+
+.bulletin {
+  background: #eff6ff;
+  border-left: 5px solid #2563eb;
+
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.bulletin-title {
+  display: block;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 12px;
+}
+
+.bulletin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.quote {
+  font-size: 22px;
+  font-style: italic;
+
+  color: #1e3a8a;
+
+  border-left: 4px solid #1e3a8a;
+  padding-left: 16px;
+}
+
+
+.figure-section img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+.caption {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+
+.side-note {
+  background: #fef3c7;
+
+  padding: 16px;
+
+  border-radius: 8px;
+
+  color: #92400e;
+}
+
+
+
+.newsletter {
+  background: #111827;
+  color: white;
+
+  padding: 60px 24px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newsletter-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.newsletter-description {
+  color: #d1d5db;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fake-input {
+  background: white;
+  color: #6b7280;
+
+  padding: 14px 18px;
+
+  border-radius: 8px;
+
+  min-width: 260px;
+
+  text-align: left;
+}
+
+.subscribe-button {
+  background: #2563eb;
+
+  padding: 14px 22px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+.contact-section {
+  max-width: 900px;
+  margin: 60px auto;
+
+  background: white;
+
+  padding: 32px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.contact-item {
+  display: flex;
+  gap: 8px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: white;
+
+  padding: 32px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links span {
+  cursor: pointer;
+  color: #cbd5e1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .city-name {
+    font-size: 26px;
+  }
+
+  .newsletter-title {
+    font-size: 28px;
+  }
+}
